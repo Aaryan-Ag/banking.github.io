@@ -12,14 +12,6 @@ while($rs = mysqli_fetch_assoc($query)){
     $cbalance = $rs['balance'];
     $cemail = $rs['email'];
 }
-    // echo "DETAILS OF CUSTOMER :-";
-    // echo "<br>";
-    // echo "<br>";
-    // echo "Name :$cname";
-    // echo "<br>";
-    // echo "Balance :$cbalance";
-    // echo "<br>";
-    // echo "EMAIL :$cemail";
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +20,7 @@ while($rs = mysqli_fetch_assoc($query)){
         <style>
             body {
             background: #15e0eb;
-        }
+            }
             form {
                 text-align: center;
                 padding: 50px;
@@ -51,6 +43,14 @@ while($rs = mysqli_fetch_assoc($query)){
             border: 3px solid black;
             width:300px;
             height:30px;
+            }
+            select[name="name"] {
+                border-collapse: collapse;
+            border: 3px solid black;
+            width:300px;
+            height:40px;
+            text-align: center;
+                font-size: 20px;
             }
             h1 {
                 text-align: center;
@@ -92,7 +92,19 @@ while($rs = mysqli_fetch_assoc($query)){
         </div>
         <form method="POST" action="submit.php" id="form">
             Transfer to:
-            <input type="text" name="name" required>
+            <select name="name" required>
+                <option value="Aaryan">Aaryan</option>
+                <option value="Balaji">Balaji</option>
+                <option value="Shubham">Shubham</option>
+                <option value="Damon">Damon</option>
+                <option value="Elena">Elena</option>
+                <option value="Arjun">Arjun</option>
+                <option value="Chandan">Chandan</option>
+                <option value="Suresh">Suresh</option>
+                <option value="Somesh">Somesh</option>
+                <option value="Karna">Karna</option>
+            
+            </select>
             <br>
             <br>
            &nbsp; Amount: &nbsp;
@@ -107,4 +119,5 @@ while($rs = mysqli_fetch_assoc($query)){
         </script>
     </body>
 </html>
+
 
