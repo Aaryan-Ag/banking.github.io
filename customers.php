@@ -10,10 +10,13 @@
             text-align: centre;
             color: white;
             background: #CC0700;
+            text-decoration: none;
         }
         table, th, td {
             border: 3px solid white;
             padding: 15px;
+            color: white;
+            text-decoration: none;
             font-size: 20px;
             text-align: center;
             border-collapse: collapse;
@@ -50,7 +53,7 @@
         <title>Customers</title>
     </head>
 
-    <body>
+    <body link="white" vlink="white" alink="white">
    <div class="dh"> <h1>Customers Data :-</h1></div> 
         <br> <br>
         <a href="transactions.php">
