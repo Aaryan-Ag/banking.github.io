@@ -20,9 +20,11 @@ $query2 = mysqli_query($conn, $sql2);
 while($rs = mysqli_fetch_assoc($query2)){
     $rbalance = $rs['balance'];
 }
-
+if($sbalance>=$money)
+{
 $sbalance = $sbalance-$money;
 $rbalance = $rbalance+$money;
+
 
 
     
@@ -44,7 +46,10 @@ else{
      $ter = "UPDATE customers SET balance = '$rbalance' WHERE name = '$rname'";
       $conn->query($ter);
           
-    
+} 
+}
+else {
+    header("Location: customers.php");
 }
 
     
